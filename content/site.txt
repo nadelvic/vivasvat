@@ -1,1 +1,21 @@
-Title: Site Title
+Title: Vivasvat yoga
+
+----
+
+HeaderTitle: Vivasvat Yoga
+
+----
+
+Author: Nathan Delavictoire
+
+----
+
+Description: Website presenting courses and activities proposed by vivasvat yoga
+
+----
+
+Keywords: Yoga, Ashtanga, Yin
+
+----
+
+(date: Year) · (link: http://vivasgat.yoga )

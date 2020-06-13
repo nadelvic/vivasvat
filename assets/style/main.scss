@@ -1,0 +1,45 @@
+@import 'sass/font';
+@import 'sass/variables';
+
+@import 'sass/grid';
+
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+body{
+    margin:0;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:$lightGrey;
+    min-height:1000px;
+    width:100vw;
+    overflow-x:hidden;
+    font-family:$rosario;
+    font-size:$normal;
+    font-weight:$regular;
+    color:$darkBlue;
+    line-height:1.4;
+    -webkit-font-smoothing: antialiased;
+  
+  }
+
+
+header.header.cf {
+    position:relative;
+    margin:0;
+    width: 100vw;
+    height:120px;
+    background-color: #fff;
+    border-bottom:1px solid #fcfcfc;
+
+}

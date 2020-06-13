@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Rosario";
+  src: url("./font/rosario/Rosario-Regular.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rosario";
+  src: url("./font/rosario/Rosario-Bold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rosario";
+  src: url("./font/rosario/Rosario-Italic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rosario";
+  src: url("./font/rosario/Rosario-BoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #E6E6ED;
+  min-height: 1000px;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: Rosario, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #0D1126;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+header.header.cf {
+  position: relative;
+  margin: 0;
+  width: 100vw;
+  height: 120px;
+  background-color: #fff;
+  border-bottom: 1px solid #fcfcfc;
+}
+
+/*# sourceMappingURL=main.css.map */

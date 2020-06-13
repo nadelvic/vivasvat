@@ -1,3 +1,14 @@
+
+# Vivasvat yoga website
+
+This project aims at developping a small website for the company vivasvat proposing different yoga activities.
+
+
+
+
+
+-----
+
 # Kirby Plainkit
 
 Kirby is a file-based CMS.
