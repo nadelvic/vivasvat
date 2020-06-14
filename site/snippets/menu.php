@@ -1,22 +1,19 @@
-<nav role="navigation" class="Navigation">
+<?php
 
-  <ul class="menu cf">
-    <? foreach($pages->listed() as $p): ?>
-    <li>
-      <a <? e($p->isOpen(), ' class="active"') ?> href="<?= $p->url() ?>"><?= $p->title()->html() ?></a>
+// main menu items
 
-      <? if(FALSE && $p->hasVisibleChildren()): ?>
-      <ul class="submenu">
-        <? foreach($p->children()->visible() as $p): ?>
-        <li>
-          <a href="<?= $p->url() ?>"><?= $p->title()->html() ?></a>
-        </li>
-        <? endforeach ?>
-      </ul>
-      <? endif ?>
+$items = $site->find('home','about','class','contact');
 
-    </li>
-    <? endforeach ?>
+// only show the menu if items are available
+if($items->isNotEmpty()):
+
+?>
+
+  <ul>
+    <?php foreach($items as $item): ?>
+    <li><a<?php e($item->isOpen(), ' class="active"') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
+    <?php endforeach ?>
   </ul>
 
-</nav>
+<?php endif ?>
+

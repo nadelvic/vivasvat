@@ -36,10 +36,59 @@ body{
 
 header.header.cf {
     position:relative;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
     margin:0;
     width: 100vw;
     height:120px;
     background-color: #fff;
     border-bottom:1px solid #fcfcfc;
+    .header-left-container{
+        border:1px solid black;
+        width:30vw;
+        height:120px;
+    }
 
+    .header-center-container{
+        border:1px solid black;
+        width:30vw;
+        height:120px;
+    }
+
+    .header-right-container{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:flex-end;
+        border:1px solid black;
+        width:30vw;
+        height:120px;
+    }
+}
+
+.languages{
+    margin:10px 20px;
+    ul {
+        list-style: none;
+        li {
+            display:inline-block;
+            margin: 0px 4px;
+            //text-transform: uppercase;
+        }
+    }
+}
+
+nav.pages{
+    width:100%;
+    float:right;
+    ul{
+        float:right;
+        
+        li{
+            display:inline-block;
+            margin : 10px 20px;
+           
+        }
+    }
 }

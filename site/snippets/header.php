@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
-  <meta name="description" content="<?= $site->description()->html() ?>">
-  <meta name="keywords" content="<?= $site->keywords()->html() ?>">
-
-  <script src="https://use.typekit.net/ljr3wtp.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   <?= css('assets/style/main.css') ?>
 
@@ -18,5 +13,40 @@
 <body>
 
   <header class="header cf" role="banner">
-    <? snippet('menu') ?>
+    <div class="header-left-container">
+
+    </div>
+    <div class="header-center-container">
+
+    </div>
+     
+    <div class="header-right-container">
+    <nav class="languages">
+    <?php $languages = $kirby->languages() ?>
+      <ul>
+        <?php $language = $languages->find('fr') ?>
+        <li<?php e($kirby->language() == $language, ' class="active"') ?>>
+          <a href="<?php echo $language->url() ?>" hreflang="<?php echo $language->code() ?>">
+          <?php echo html($language->code()) ?>
+           </a>
+        </li>
+        <li>/</li>
+
+       <?php $language = $languages->find('en') ?>
+        <li<?php e($kirby->language() == $language, ' class="active"') ?>>
+          <a href="<?php echo $language->url() ?>" hreflang="<?php echo $language->code() ?>">
+          <?php echo html($language->code()) ?>
+           </a>
+       </li>
+
+
+
+      </ul>
+    </nav>
+    <nav class="pages">
+     <? snippet('menu') ?>
+     </nav>
+    </div>
+   
+  
   </header>

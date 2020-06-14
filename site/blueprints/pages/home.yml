@@ -1,0 +1,7 @@
+title: Accueil
+preset: Home page
+fields:
+  text:
+    label: Text
+    type: textarea
+    size: large

@@ -23,8 +23,9 @@ c::set('languages', array(
   /* Debug Mode  / Home setting */
   
   return [
+      'languages' => true,
       'debug'  => true,
-      'home' => '1-home'
+     
   ];
 
 ?>
