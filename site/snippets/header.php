@@ -14,9 +14,22 @@
 
   <header class="header cf" role="banner">
     <div class="header-left-container">
+      <a class="social-network" href="https://www.instagram.com/camour_s/">
+      <img  src="<?php echo kirby()->urls()->assets() . '/images/Instagram_link.svg' ?>" alt="" />
+      </a>
+
+      <a class="social-network" href="https://www.facebook.com/camilleslmn75">
+      <img  src="<?php echo kirby()->urls()->assets() . '/images/Facebook_link.svg' ?>" alt="" />
+      </a>
 
     </div>
     <div class="header-center-container">
+      <div class="logo-container">
+      <img  src="<?php echo kirby()->urls()->assets() . '/images/Vivasvat_logo.svg' ?>" alt="" />
+      </div>
+      <div class="site-title">
+        <?= $site->title() ?>
+      </div>
 
     </div>
      
