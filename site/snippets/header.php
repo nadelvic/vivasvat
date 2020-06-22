@@ -12,8 +12,8 @@
 </head>
 <body>
 
-  <header class="header cf" role="banner">
-    <div class="header-left-container">
+  <header class="header cf container_12 fluid" role="banner">
+    <div class="header-left-container grid_4 m_4 s_1">
       <a class="social-network" href="https://www.instagram.com/camour_s/">
       <img  src="<?php echo kirby()->urls()->assets() . '/images/Instagram_link.svg' ?>" alt="" />
       </a>
@@ -23,7 +23,7 @@
       </a>
 
     </div>
-    <div class="header-center-container">
+    <div class="header-center-container grid_4 m_4 s_2">
       <div class="logo-container">
       <img  src="<?php echo kirby()->urls()->assets() . '/images/Vivasvat_logo.svg' ?>" alt="" />
       </div>
@@ -33,7 +33,7 @@
 
     </div>
      
-    <div class="header-right-container">
+    <div class="header-right-container grid_4 m_4 s_1">
     <nav class="languages">
     <?php $languages = $kirby->languages() ?>
       <ul>
