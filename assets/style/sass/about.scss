@@ -1,0 +1,55 @@
+// style/sass/about.scss
+
+#about{
+    display:block;
+    position:relative;
+    float:left;
+    font-size:$normal;
+    min-height:calc(100vh - 120px); 
+    h1 {
+        font-size:$medium;
+    }
+    .content{
+        z-index:2;
+        display:block;
+        float:left;
+        margin-top:60px;
+        figure {
+            position: relative;
+            width:120%;
+            left:-10%;
+            margin:30px auto;
+            img{
+                width:110%;
+                margin:30px auto;
+            }
+        }
+       
+        padding-bottom:100px;
+    }
+
+    $sun-radius: 200px;
+
+    .bottom-background {
+        display:block;
+        z-index:0;
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:600px;
+        background-color:$vivasvatYellow;
+        overflow:hidden;
+        .bottom-sun {
+            display:block;
+            width:$sun-radius*2;
+            height:$sun-radius*2;
+            margin:0 auto;
+            position: absolute;
+            left:calc(50% - #{$sun-radius});
+            bottom:-$sun-radius;
+            border-radius:$sun-radius;
+            background-color:$white;
+        }
+    }
+}

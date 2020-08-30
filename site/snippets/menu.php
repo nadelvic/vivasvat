@@ -2,7 +2,7 @@
 
 // main menu items
 
-$items = $site->find('home','about','class','contact');
+$items = $site->find('home','about','classes','contact');
 
 // only show the menu if items are available
 if($items->isNotEmpty()):

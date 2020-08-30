@@ -39,7 +39,7 @@
       <ul>
         <?php $language = $languages->find('fr') ?>
         <li<?php e($kirby->language() == $language, ' class="active"') ?>>
-          <a href="<?php echo $language->url() ?>" hreflang="<?php echo $language->code() ?>">
+          <a href="<?php echo $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
           <?php echo html($language->code()) ?>
            </a>
         </li>
@@ -47,7 +47,7 @@
 
        <?php $language = $languages->find('en') ?>
         <li<?php e($kirby->language() == $language, ' class="active"') ?>>
-          <a href="<?php echo $language->url() ?>" hreflang="<?php echo $language->code() ?>">
+          <a href="<?php echo $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
           <?php echo html($language->code()) ?>
            </a>
        </li>

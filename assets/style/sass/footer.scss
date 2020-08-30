@@ -1,0 +1,36 @@
+.footer-frame{
+    display:block;
+    float:left;
+    background-color:rgba(2,2,2,.1);
+    width:100vw;
+    height:$footer-height;
+}
+
+footer {
+    display:block;
+    z-index:-1;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100vw;
+    height:$footer-height;
+    color:$lightGrey;
+    font-size:$small;
+    background-color:$textGrey;
+    .footer__text{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        height:100%;
+    }
+    .footer__social-network{
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+        height:100%;
+        .social-network{
+            margin-right:10px;
+        }
+
+    }
+}

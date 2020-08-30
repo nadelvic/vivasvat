@@ -130,6 +130,25 @@
 
 @media screen and (max-width: 1170px){
 
+    .md_1,
+    .md_2,
+    .md_3,
+    .md_4,
+    .md_5,
+    .md_6,
+    .md_7,
+    .md_8,
+    .md_9,
+    .md_10,
+    .md_11,
+    .md_12 {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+
     .container_12 .md_1 {
         width: 6.333%;
     }
@@ -235,8 +254,8 @@
     .grid_10,
     .grid_11,
     .grid_12 {
-        margin-left: 0%;
-        margin-right: 0%;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .container_12 .m_1 {

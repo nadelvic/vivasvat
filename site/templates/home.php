@@ -1,6 +1,6 @@
 <? snippet('header') ?>
 
-  <main class="main" role="main"> <!-- Content section -->
+  <main id="home" class="main" role="main"> <!-- Content section -->
       <div class="home-top-section container_12 fluid">
         <div class="home-top-section__left grid_7 m_7 s_4">
 
