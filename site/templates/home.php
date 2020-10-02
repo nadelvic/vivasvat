@@ -17,8 +17,8 @@
 
         </div>
 
-        <div class="home-top-section__right grid_4 offset_1 m_4 m-offset_1 s_4">
-          <div class="cover-container">
+        <div class="home-top-section__right grid_4 offset_1 m_5 m-offset_0 s-offset_0 s_4">
+          <div class="cover-container" style="background-image:url(<?= $page->image()->url() ?>)">
             <img src="<?= $page->image()->url()?>" alt="" />
           </div>
 

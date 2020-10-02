@@ -2,8 +2,6 @@
 return function($kirby, $pages, $page) {
 
     $alert = null;
-    
-
 
     if($kirby->request()->is('POST') && get('submit')) {
 
@@ -48,11 +46,12 @@ return function($kirby, $pages, $page) {
                     'template' => 'email',
                     'from'     => 'sender@vivasvat.yoga',
                     'replyTo'  => $data['email'],
-                    'to'       => 'nathan.delavictoire@gmail.com',
-                    'subject'  => esc($data['name']) . ' sent you a message from your contact form',
+                    'to'       => 'vivasvat.yoga@gmail.com',
+                    'subject'  => esc($data['firstname']).' '.esc($data['lastname']). ' sent you a message from your contact form',
                     'data'     => [
                         'text'   => esc($data['text']),
-                        'sender' => esc($data['name'])
+                        'sender' => esc($data['firstname'].' '.esc($data['lastname'])),
+                        'email'     => esc($data['email'])
                     ]
                 ]);
 

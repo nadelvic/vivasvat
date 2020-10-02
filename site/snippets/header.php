@@ -33,7 +33,7 @@
 
     </div>
      
-    <div class="header-right-container grid_4 m_4 s_1">
+    <div id="menus" class="header-right-container grid_4 m_4 s_1">
     <nav class="languages">
     <?php $languages = $kirby->languages() ?>
       <ul>
@@ -60,6 +60,45 @@
      <? snippet('menu') ?>
      </nav>
     </div>
+
+    <div id="burger-menu" class="burger-menu grid_4 m_4 s_1">
+      <div class="burger-icon">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+      
+
+      <nav class="pages">
+        <? snippet('menu') ?>
+      </nav>
+
+
+      <nav class="languages">
+      <?php $languages = $kirby->languages() ?>
+        <ul>
+          <?php $language = $languages->find('fr') ?>
+          <li<?php e($kirby->language() == $language, ' class="active"') ?>>
+            <a href="<?php echo $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+            <?php echo html($language->code()) ?>
+            </a>
+          </li>
+          <li>/</li>
+
+        <?php $language = $languages->find('en') ?>
+          <li<?php e($kirby->language() == $language, ' class="active"') ?>>
+            <a href="<?php echo $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+            <?php echo html($language->code()) ?>
+            </a>
+        </li>
+        </ul>
+      </nav>
+
+    </div>
+
+
    
-  
   </header>
