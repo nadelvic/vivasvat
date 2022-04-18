@@ -2,14 +2,14 @@
     display:block;
     float:left;
     background-color:rgba(2,2,2,0);
-    width:100vw;
+    width:0vw;
     height:$footer-height;
 }
 
 footer {
     display:block;
-    z-index:-1;
-    position:fixed;
+    z-index:1;
+    position:relative;
     bottom:0;
     left:0;
     width:100vw;
@@ -17,11 +17,26 @@ footer {
     color:$lightGrey;
     font-size:$small;
     background-color:$textGrey;
-    .footer__text{
+    .footer__content{
         display:flex;
         align-items: center;
         justify-content: flex-start;
-        height:100%;
+        height:$footer-height;
+        .footer__item{
+            display:flex;
+            height:$footer-height;
+            flex-direction:column;
+            align-items:flex-start;
+            justify-content:space-evenly;
+            a{
+                color:$lightGrey;
+                text-decoration:none;
+                cursor:pointer;
+            }
+            a:hover{
+                color:white;
+            }
+        }
     }
     .footer__social-network{
         display:flex;

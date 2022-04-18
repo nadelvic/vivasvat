@@ -925,6 +925,14 @@ h1 {
   margin-bottom: 0.6em;
 }
 
+strong {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+
 p {
   margin-bottom: 0.6em;
 }
@@ -1101,9 +1109,10 @@ nav.pages ul li {
   top: 0px;
   left: 0px;
   background-color: white;
-  height: calc(100vh);
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   transition: 0.4s;
+  overflow: hidden;
 }
 #mobile-menu nav.languages {
   position: fixed;
@@ -1124,8 +1133,8 @@ nav.pages ul li {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 #mobile-menu nav.pages ul {
   position: relative;
@@ -1143,57 +1152,18 @@ nav.pages ul li {
   margin: 50px 0;
 }
 
-@media only screen and (max-width: 968px) {
-  #menus {
-    display: none;
-  }
-
-  #burger-menu {
-    display: flex;
-  }
-}
-@media only screen and (max-width: 720px) {
-  .header-center-container .site-title {
-    font-size: 1.2em !important;
-  }
-  .header-center-container .logo-container {
-    display: block;
-    position: relative;
-    width: 100px;
-    height: 50px;
-  }
-  .header-center-container .logo-container img {
-    position: relative;
-    display: block;
-    margin: 20px auto 10px auto;
-    width: 25px;
-  }
-  .header-center-container .logo-container:before {
-    content: "";
-    display: block;
-    z-index: 0;
-    position: absolute;
-    margin: 20px auto 10px auto;
-    top: 0;
-    left: 10px;
-    width: 22px;
-    height: 22px;
-    border-radius: 25px;
-    background-color: #FFF296;
-  }
-}
 .footer-frame {
   display: block;
   float: left;
   background-color: rgba(2, 2, 2, 0);
-  width: 100vw;
+  width: 0vw;
   height: 120px;
 }
 
 footer {
   display: block;
-  z-index: -1;
-  position: fixed;
+  z-index: 1;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -1202,11 +1172,26 @@ footer {
   font-size: 0.9em;
   background-color: #393939;
 }
-footer .footer__text {
+footer .footer__content {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 100%;
+  height: 120px;
+}
+footer .footer__content .footer__item {
+  display: flex;
+  height: 120px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+footer .footer__content .footer__item a {
+  color: #E6E6E6;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer .footer__content .footer__item a:hover {
+  color: white;
 }
 footer .footer__social-network {
   display: flex;
@@ -1231,7 +1216,7 @@ main.main {
 .home-top-section {
   position: relative;
   width: 100%;
-  height: 50%;
+  height: 40%;
 }
 .home-top-section .quote-container {
   position: relative;
@@ -1293,7 +1278,7 @@ main.main {
 .home-bottom-section {
   display: block;
   float: left;
-  height: 50%;
+  height: 60%;
   background-color: #FFF296;
 }
 
@@ -1318,6 +1303,32 @@ main.main {
 
 .home-top-section__left {
   z-index: 5;
+}
+
+a.vi-btn {
+  margin: 20px 0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #393939;
+  transition: all 0.15s 0s;
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.12);
+}
+a.vi-btn:hover {
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.12);
+  background-color: #000;
+  color: #fff;
+}
+a.vi-btn.class {
+  margin-left: 20px;
+  padding: 6px 12px;
 }
 
 @media only screen and (max-width: 968px) {
@@ -1462,11 +1473,11 @@ main.main {
 }
 
 .class__container {
-  display: block;
+  display: flex;
   margin: 10px 0;
   border: 1px solid #E6E6E6;
   border-radius: 5px;
-  height: 300px;
+  min-height: 300px;
   color: #393939;
 }
 .class__container .class__left-section {
@@ -1476,7 +1487,7 @@ main.main {
   justify-content: center;
   float: left;
   width: 20%;
-  height: 300px;
+  height: inherit;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   font-size: 0.9em;
@@ -1522,6 +1533,7 @@ main.main {
 .class__container .class__main-section .class__title {
   margin-top: 20px;
   font-size: 1.2em;
+  font-weight: 600;
 }
 .class__container .class__main-section .class__location {
   font-size: 0.9em;

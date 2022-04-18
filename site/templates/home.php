@@ -1,5 +1,6 @@
 <? snippet('header') ?>
 
+
   <main id="home" class="main" role="main"> <!-- Content section -->
       <div class="home-top-section container_12 fluid">
         <div class="home-top-section__left grid_7 m_7 s_4">
@@ -31,9 +32,11 @@
       <div class="home-bottom-section container_12 fluid">
         <div class="landing-text grid_5 offset_2 m_5 m-offset_2 s_4">
           <?= $page->text()->kirbytext() ?>
+        <a href="https://widget.fitogram.pro/vivasvat-yoga" target="°blank" class="vi-btn"><?= $page->bouton() ?></a>
+         
         </div>
         
-       
+        
       </div>
   </main>
 

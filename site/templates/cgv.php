@@ -7,10 +7,7 @@
       <?= $page->text()->kirbytext() ?>
     </div>
 
-    <div class="bottom-background">
-      <div class="bottom-sun"></div>
-    </div>
-
+   
 
 </main>
 

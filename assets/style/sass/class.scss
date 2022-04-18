@@ -52,11 +52,11 @@ $classBlockHeight:300px;
 
 
 .class__container {
-    display:block;
+    display:flex;
     margin: 10px 0;
     border: 1px solid $lightGrey;
     border-radius:$class-border-radius;
-    height:$classBlockHeight;
+    min-height:$classBlockHeight;
     color:$textGrey;
     .class__left-section{
         display:flex;
@@ -65,7 +65,7 @@ $classBlockHeight:300px;
         justify-content:center;
         float:left;
         width:20%;
-        height:$classBlockHeight;
+        height:inherit;
         border-top-left-radius:$class-border-radius;
         border-bottom-left-radius: $class-border-radius;
         font-size:$small;
@@ -114,6 +114,7 @@ $classBlockHeight:300px;
         .class__title{
             margin-top:20px;
             font-size:$medium;
+            font-weight:$bold;
         }
         .class__location{
             font-size:$small;
