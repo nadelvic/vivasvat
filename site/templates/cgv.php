@@ -1,4 +1,4 @@
-<? snippet('header') ?>
+<?php snippet('header') ?>
 
 
 <main id="about" class="main container_12 fluid" role="main">
@@ -11,4 +11,4 @@
 
 </main>
 
-<? snippet('footer') ?> 
+<?php snippet('footer') ?> 

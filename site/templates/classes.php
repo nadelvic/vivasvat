@@ -1,4 +1,4 @@
-<? snippet('header') ?>
+<?php snippet('header') ?>
 
 <main id="class" class="main container_12 fluid" role="main"> <!-- Content Section -->
 
@@ -36,4 +36,4 @@
 
 
 
-<? snippet('footer') ?>
+<?php snippet('footer') ?>

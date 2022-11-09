@@ -1,4 +1,4 @@
-<? snippet('header') ?>
+<?php snippet('header') ?>
 
 
   <main id="home" class="main" role="main"> <!-- Content section -->
@@ -19,7 +19,7 @@
         </div>
 
         <div class="home-top-section__right grid_4 offset_1 m_5 m-offset_0 s-offset_0 s_4">
-          <div class="cover-container" style="background-image:url(<?= $page->image()->url() ?>)">
+          <div class="cover-container" style="background-image:url(<?= $page->image('vivasvat_cover.jpg')->url() ?>)">
             <img src="<?= $page->image()->url()?>" alt="" />
           </div>
 
@@ -40,4 +40,4 @@
       </div>
   </main>
 
-<? snippet('footer') ?>
+<?php snippet('footer') ?>

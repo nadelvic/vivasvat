@@ -1,5 +1,5 @@
-<?= snippet('header') ?>
+<?php snippet('header') ?>
 <h1>Default Template </h1>
 
-<?= snippet('footer') ?>
+<?php snippet('footer') ?>
 
