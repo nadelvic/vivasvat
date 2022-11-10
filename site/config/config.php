@@ -20,8 +20,16 @@ c::set('languages', array(
     ),
   ));*/
   
-  /* Debug Mode  / Home setting */
+
+
+ // Production mod 
+c::set('plugin.recaptcha.sitekey', '6LdE7fUiAAAAAC6jRbHUQ-uzj9HDPgg1bb619WJ2');
+
+c::set('plugin.recaptcha.secret', '');
+
   
+
+
   return [
       'languages' => true,
       'debug'  => true,

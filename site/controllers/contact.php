@@ -17,7 +17,8 @@ return function($kirby, $pages, $page) {
             'firstname'  => get('firstname'),
             'lastname'  => get('lastname'),
             'email' => get('email'),
-            'text'  => get('text')
+            'text'  => get('text'),
+           
         ];
 
         $rules = [
@@ -25,13 +26,15 @@ return function($kirby, $pages, $page) {
             'lastname'  => ['required', 'min' => 2],
             'email' => ['required', 'email'],
             'text'  => ['required', 'min' => 3, 'max' => 3000],
+         
         ];
 
         $messages = [
             'firstname'  => 'First name must at least have 2 letters',
             'lastname'  => 'Last name must at least have 2 letters',
             'email' => 'Please enter a valid email address',
-            'text'  => 'Please enter a text between 3 and 3000 characters'
+            'text'  => 'Please enter a text between 3 and 3000 characters',
+          
         ];
 
         // some of the data is invalid

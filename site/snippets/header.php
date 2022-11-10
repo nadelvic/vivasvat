@@ -9,6 +9,15 @@
 
   <?= css('assets/style/main.css') ?>
 
+  <script type="text/javascript">
+  var onloadCallback = function() {
+    grecaptcha.render('recaptcha', {
+          'sitekey' : '6LdE7fUiAAAAAC6jRbHUQ-uzj9HDPgg1bb619WJ2'
+        });
+  };
+  </script>
+ 
+
 </head>
 <body>
 
@@ -57,7 +66,7 @@
       </ul>
     </nav>
     <nav class="pages">
-     <? snippet('menu') ?>
+     <?php snippet('menu') ?>
      </nav>
     </div>
 

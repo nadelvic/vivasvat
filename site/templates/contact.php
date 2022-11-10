@@ -16,7 +16,7 @@
             <div><?= $alert['error'] ?></div>
         <?php endif ?>
 
-          <form method="post" action="<?= $page->url() ?>">
+          <form id="vivasvat-form" method="post" action="<?= $page->url() ?>">
 
               <div class="field">
                   <label for="firstname">
@@ -52,8 +52,16 @@
                   <?= isset($alert['text']) ? '<span class="alert error">' . html($alert['text']) . '</span>' : '' ?>
               </div>
 
-              <input type="submit" name="submit" value="Envoyer">
+              <div class="field">
+                <div id="recaptcha"></div>
+     
+              </div>
+
+             <input type="submit" name="submit" value="<?= $page->buttonLabel() ?>">
           </form>
+          <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async defer>
+        </script>
           <?php endif ?>
 
 
@@ -62,6 +70,7 @@
     </main>
 
 </main>
+
 
   
 <?php snippet('footer') ?>
