@@ -62,6 +62,23 @@
           <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
       async defer>
         </script>
+        <script>
+            document.getElementById("vivasvat-form").addEventListener("submit",function(evt)
+                {
+                
+                var response = grecaptcha.getResponse();
+                if(response.length == 0) 
+                { 
+                    //reCaptcha not verified
+                    alert("Please verify you are human!"); 
+                    evt.preventDefault();
+                    return false;
+                }
+                //captcha verified
+                //do the rest of your validations here
+                
+                });
+        </script>
           <?php endif ?>
 
 

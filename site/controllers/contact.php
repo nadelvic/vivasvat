@@ -5,8 +5,6 @@ return function($kirby, $pages, $page) {
 
     if($kirby->request()->is('POST') && get('submit')) {
 
-        
-
         // check the honeypot
         /*if(empty(get('website')) === false) {
             go($page->url());
@@ -18,6 +16,7 @@ return function($kirby, $pages, $page) {
             'lastname'  => get('lastname'),
             'email' => get('email'),
             'text'  => get('text'),
+        
            
         ];
 
@@ -26,6 +25,7 @@ return function($kirby, $pages, $page) {
             'lastname'  => ['required', 'min' => 2],
             'email' => ['required', 'email'],
             'text'  => ['required', 'min' => 3, 'max' => 3000],
+
          
         ];
 
@@ -37,11 +37,40 @@ return function($kirby, $pages, $page) {
           
         ];
 
-        // some of the data is invalid
-        if($invalid = invalid($data, $rules, $messages)) {
-            $alert = $invalid;
+        $captchaInvalid = true;
 
-            // the data is fine, let's send the email
+        // Validate captcha
+        $curlx = curl_init();
+        curl_setopt($curlx, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+        curl_setopt($curlx, CURLOPT_HEADER, 0);
+        curl_setopt($curlx, CURLOPT_RETURNTRANSFER, 1); 
+        curl_setopt($curlx, CURLOPT_POST, 1);
+
+        $post_data = 
+        [
+            'secret' => '6LdE7fUiAAAAAJsKuqbVi6E2E5p9XNxk5q3dt_4c', //<--- your reCaptcha secret key
+            'response' => $_POST['g-recaptcha-response']
+        ];
+        curl_setopt($curlx, CURLOPT_POSTFIELDS, $post_data);
+        $resp = json_decode(curl_exec($curlx));
+        curl_close($curlx);
+
+        if ($resp->success) 
+        {
+          $captchaInvalid = false;
+        } else {
+            $captchaInvalid = true;    
+        }
+        $invalid = invalid($data, $rules, $messages);
+
+        // some of the data is invalid
+        if ($captchaInvalid && $invalid) {
+            $alert = "";
+            if ($invalid) {
+                $alert = $invalid;
+            } else {
+                $alert = "You failed to check that you are not a robot";
+            }
         } else {
             try {
                 
