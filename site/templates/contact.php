@@ -7,16 +7,20 @@
 
         <h1><?= $page->contentTitle()->html() ?></h1>
 
-        <?php if($success): ?>
+        <?php //if($success): ?>
         <div class="alert success">
-            <p><?= $success ?></p>
+            <!--<p><?php /*$success */ ?></p> -->
+            <?= $page->messageContact()->html() ?>
         </div>
-        <?php else: ?>
+
+
+
+        <?php //else: ?>
         <?php if (isset($alert['error'])): ?>
             <div><?= $alert['error'] ?></div>
         <?php endif ?>
 
-          <form id="vivasvat-form" method="post" action="<?= $page->url() ?>">
+          <form id="vivasvat-form" method="post" style="display:none" action="<?= $page->url() ?>">
 
               <div class="field">
                   <label for="firstname">
@@ -70,16 +74,15 @@
                 if(response.length == 0) 
                 { 
                     //reCaptcha not verified
-                    alert("Please verify you are human!"); 
-                    evt.preventDefault();
-                    return false;
+                    //alert("Please verify you are human!"); 
+                    //return false;
                 }
                 //captcha verified
                 //do the rest of your validations here
                 
                 });
         </script>
-          <?php endif ?>
+          <?php //endif ?>
 
 
         </div>
